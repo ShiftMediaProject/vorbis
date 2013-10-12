@@ -121,38 +121,38 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>..\..\..\</OutDir>
-    <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)</IntDir>
+    <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>libvorbisd</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)</IntDir>
+    <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>libvorbisd</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
     <OutDir>..\..\..\</OutDir>
-    <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)</IntDir>
+    <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>vorbisd</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
-    <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)</IntDir>
+    <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>vorbisd</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>..\..\..\</OutDir>
-    <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)</IntDir>
+    <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>libvorbis</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)</IntDir>
+    <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>libvorbis</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
     <OutDir>..\..\..\</OutDir>
-    <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)</IntDir>
+    <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>vorbis</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
-    <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)</IntDir>
+    <IntDir>$(ProjectDir)\obj\$(Configuration)\$(Platform)\</IntDir>
     <TargetName>vorbis</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -177,7 +177,7 @@
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
 mkdir $(OutputPath)\include\vorbis
-copy ..\include\vorbis*.h $(OutputPath)\include\vorbis
+copy ..\include\vorbis\*.h $(OutputPath)\include\vorbis
 mkdir $(OutputPath)\licenses
 copy ..\COPYING $(OutputPath)\licenses\vorbis.txt</Command>
     </PostBuildEvent>
@@ -204,7 +204,7 @@ copy ..\COPYING $(OutputPath)\licenses\vorbis.txt</Command>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
 mkdir $(OutputPath)\include\vorbis
-copy ..\include\vorbis*.h $(OutputPath)\include\vorbis
+copy ..\include\vorbis\*.h $(OutputPath)\include\vorbis
 mkdir $(OutputPath)\licenses
 copy ..\COPYING $(OutputPath)\licenses\vorbis.txt</Command>
     </PostBuildEvent>
@@ -232,7 +232,7 @@ copy ..\COPYING $(OutputPath)\licenses\vorbis.txt</Command>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
 mkdir $(OutputPath)\include\vorbis
-copy ..\include\vorbis*.h $(OutputPath)\include\vorbis
+copy ..\include\vorbis\*.h $(OutputPath)\include\vorbis
 mkdir $(OutputPath)\licenses
 copy ..\COPYING $(OutputPath)\licenses\vorbis.txt</Command>
     </PostBuildEvent>
@@ -260,7 +260,7 @@ copy ..\COPYING $(OutputPath)\licenses\vorbis.txt</Command>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
 mkdir $(OutputPath)\include\vorbis
-copy ..\include\vorbis*.h $(OutputPath)\include\vorbis
+copy ..\include\vorbis\*.h $(OutputPath)\include\vorbis
 mkdir $(OutputPath)\licenses
 copy ..\COPYING $(OutputPath)\licenses\vorbis.txt</Command>
     </PostBuildEvent>
@@ -301,7 +301,7 @@ copy ..\COPYING $(OutputPath)\licenses\vorbis.txt</Command>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
 mkdir $(OutputPath)\include\vorbis
-copy ..\include\vorbis*.h $(OutputPath)\include\vorbis
+copy ..\include\vorbis\*.h $(OutputPath)\include\vorbis
 mkdir $(OutputPath)\licenses
 copy ..\COPYING $(OutputPath)\licenses\vorbis.txt</Command>
     </PostBuildEvent>
@@ -342,7 +342,7 @@ copy ..\COPYING $(OutputPath)\licenses\vorbis.txt</Command>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
 mkdir $(OutputPath)\include\vorbis
-copy ..\include\vorbis*.h $(OutputPath)\include\vorbis
+copy ..\include\vorbis\*.h $(OutputPath)\include\vorbis
 mkdir $(OutputPath)\licenses
 copy ..\COPYING $(OutputPath)\licenses\vorbis.txt</Command>
     </PostBuildEvent>
@@ -384,7 +384,7 @@ copy ..\COPYING $(OutputPath)\licenses\vorbis.txt</Command>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
 mkdir $(OutputPath)\include\vorbis
-copy ..\include\vorbis*.h $(OutputPath)\include\vorbis
+copy ..\include\vorbis\*.h $(OutputPath)\include\vorbis
 mkdir $(OutputPath)\licenses
 copy ..\COPYING $(OutputPath)\licenses\vorbis.txt</Command>
     </PostBuildEvent>
@@ -426,7 +426,7 @@ copy ..\COPYING $(OutputPath)\licenses\vorbis.txt</Command>
     <PostBuildEvent>
       <Command>mkdir $(OutputPath)\include
 mkdir $(OutputPath)\include\vorbis
-copy ..\include\vorbis*.h $(OutputPath)\include\vorbis
+copy ..\include\vorbis\*.h $(OutputPath)\include\vorbis
 mkdir $(OutputPath)\licenses
 copy ..\COPYING $(OutputPath)\licenses\vorbis.txt</Command>
     </PostBuildEvent>
