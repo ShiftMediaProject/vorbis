@@ -154,3 +154,26 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+
+
+*.o
+*.a
+*.lo
+*.la
+*.pc
+.deps
+.libs
+Makefile
+Makefile.in
+config.*
+stamp*
+libtool
+aclocal.m4
+compile
+configure
+depcomp
+install-sh
+*.spec
+ltmain.sh
+missing
+POTFILES
