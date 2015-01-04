@@ -1,8 +1,9 @@
+EXPORTS
 ;
 ; $Id$
 ; 
-LIBRARY
-EXPORTS
+
+
 _floor_P
 _mapping_P
 _residue_P
@@ -58,6 +59,12 @@ vorbis_encode_ctl
 ;
 vorbis_version_string
 ;
+; vorbisfile.def
+;
+; last modified: $Id$
+;
+
+
 ov_clear
 ov_open
 ov_open_callbacks
@@ -93,3 +100,16 @@ ov_crosslap
 ov_halfrate
 ov_halfrate_p
 ov_fopen
+;
+; $Id$
+;
+
+
+
+vorbis_encode_init
+vorbis_encode_setup_managed
+vorbis_encode_setup_vbr
+vorbis_encode_init_vbr
+vorbis_encode_setup_init
+vorbis_encode_ctl
+
