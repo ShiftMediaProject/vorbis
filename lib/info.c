@@ -5,7 +5,7 @@
  * GOVERNED BY A BSD-STYLE SOURCE LICENSE INCLUDED WITH THIS SOURCE *
  * IN 'COPYING'. PLEASE READ THESE TERMS BEFORE DISTRIBUTING.       *
  *                                                                  *
- * THE OggVorbis SOURCE CODE IS (C) COPYRIGHT 1994-2010             *
+ * THE OggVorbis SOURCE CODE IS (C) COPYRIGHT 1994-2015             *
  * by the Xiph.Org Foundation http://www.xiph.org/                  *
  *                                                                  *
  ********************************************************************
@@ -31,8 +31,8 @@
 #include "misc.h"
 #include "os.h"
 
-#define GENERAL_VENDOR_STRING "Xiph.Org libVorbis 1.3.4"
-#define ENCODE_VENDOR_STRING "Xiph.Org libVorbis I 20140122 (Turpakäräjiin)"
+#define GENERAL_VENDOR_STRING "Xiph.Org libVorbis 1.3.5"
+#define ENCODE_VENDOR_STRING "Xiph.Org libVorbis I 20150105 (⛄⛄⛄⛄)"
 
 /* helpers */
 static int ilog2(unsigned int v){
@@ -272,7 +272,6 @@ static int _vorbis_unpack_comment(vorbis_comment *vc,oggpack_buffer *opb){
 static int _vorbis_unpack_books(vorbis_info *vi,oggpack_buffer *opb){
   codec_setup_info     *ci=vi->codec_setup;
   int i;
-  if(!ci)return(OV_EFAULT);
 
   /* codebooks */
   ci->books=oggpack_read(opb,8)+1;
@@ -411,12 +410,24 @@ int vorbis_synthesis_headerin(vorbis_info *vi,vorbis_comment *vc,ogg_packet *op)
           /* um... we didn't get the initial header */
           return(OV_EBADHEADER);
         }
+        if(vc->vendor!=NULL){
+          /* previously initialized comment header */
+          return(OV_EBADHEADER);
+        }
 
         return(_vorbis_unpack_comment(vc,&opb));
 
       case 0x05: /* least significant *bit* is read first */
         if(vi->rate==0 || vc->vendor==NULL){
           /* um... we didn;t get the initial header or comments yet */
+          return(OV_EBADHEADER);
+        }
+        if(vi->codec_setup==NULL){
+          /* improperly initialized vorbis_info */
+          return(OV_EFAULT);
+        }
+        if(((codec_setup_info *)vi->codec_setup)->books>0){
+          /* previously initialized setup header */
           return(OV_EBADHEADER);
         }
 
