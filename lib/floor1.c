@@ -5,7 +5,7 @@
  * GOVERNED BY A BSD-STYLE SOURCE LICENSE INCLUDED WITH THIS SOURCE *
  * IN 'COPYING'. PLEASE READ THESE TERMS BEFORE DISTRIBUTING.       *
  *                                                                  *
- * THE OggVorbis SOURCE CODE IS (C) COPYRIGHT 1994-2009             *
+ * THE OggVorbis SOURCE CODE IS (C) COPYRIGHT 1994-2015             *
  * by the Xiph.Org Foundation http://www.xiph.org/                  *
  *                                                                  *
  ********************************************************************
@@ -855,7 +855,9 @@ int floor1_encode(oggpack_buffer *opb,vorbis_block *vb,
 
       /* generate the partition's first stage cascade value */
       if(csubbits){
-        int maxval[8];
+        int maxval[8]={0,0,0,0,0,0,0,0}; /* gcc's static analysis
+                                            issues a warning without
+                                            initialization */
         for(k=0;k<csub;k++){
           int booknum=info->class_subbook[class][k];
           if(booknum<0){

@@ -5,7 +5,7 @@
  * GOVERNED BY A BSD-STYLE SOURCE LICENSE INCLUDED WITH THIS SOURCE *
  * IN 'COPYING'. PLEASE READ THESE TERMS BEFORE DISTRIBUTING.       *
  *                                                                  *
- * THE OggVorbis SOURCE CODE IS (C) COPYRIGHT 1994-2009             *
+ * THE OggVorbis SOURCE CODE IS (C) COPYRIGHT 1994-2015             *
  * by the Xiph.Org Foundation http://www.xiph.org/                  *
  *                                                                  *
  ********************************************************************
@@ -311,6 +311,12 @@ STIN long decode_packed_entry_number(codebook *book, oggpack_buffer *b){
     lo=0;
     hi=book->used_entries;
   }
+
+  /* Single entry codebooks use a firsttablen of 1 and a
+     dec_maxlength of 1.  If a single-entry codebook gets here (due to
+     failure to read one bit above), the next look attempt will also
+     fail and we'll correctly kick out instead of trying to walk the
+     underformed tree */
 
   lok = oggpack_look(b, read);
 
