@@ -329,22 +329,22 @@
       <AdditionalLibraryDirectories>$(OutDir)\lib\x86\;$(ProjectDir)\..\..\prebuilt\lib\x86\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\vorbis
-copy ..\include\vorbis\*.h $(OutDir)\include\vorbis
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\vorbis
+copy ..\include\vorbis\*.h "$(OutDir)"\include\vorbis
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\vorbis.txt
-if exist $(ProjectDir)\..\..\prebuilt\include\ogg\ogg.h (
-mkdir $(OutDir)\include\ogg
-copy /y $(ProjectDir)\..\..\prebuilt\include\ogg\*.h $(OutDir)\include\ogg\
+if exist "$(ProjectDir)"\..\..\prebuilt\include\ogg\ogg.h (
+mkdir "$(OutDir)"\include\ogg
+copy /y "$(ProjectDir)"\..\..\prebuilt\include\ogg\*.h "$(OutDir)"\include\ogg\
 )</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\vorbis (
-rd /s /q $(OutDir)\include\vorbis
+if exist "$(OutDir)"\include\vorbis (
+rd /s /q "$(OutDir)"\include\vorbis
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -354,8 +354,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\vorbis (
-rmdir /s /q $(OutDir)\include\vorbis
+      <Command>if exist "$(OutDir)"\include\vorbis (
+rmdir /s /q "$(OutDir)"\include\vorbis
 )
 if exist $(OutDir)\licenses\vorbis.txt (
 del /f /q $(OutDir)\licenses\vorbis.txt
@@ -384,22 +384,22 @@ del /f /q $(OutDir)\licenses\vorbis.txt
       <AdditionalLibraryDirectories>$(OutDir)\lib\x64\;$(ProjectDir)\..\..\prebuilt\lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\vorbis
-copy ..\include\vorbis\*.h $(OutDir)\include\vorbis
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\vorbis
+copy ..\include\vorbis\*.h "$(OutDir)"\include\vorbis
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\vorbis.txt
-if exist $(ProjectDir)\..\..\prebuilt\include\ogg\ogg.h (
-mkdir $(OutDir)\include\ogg
-copy /y $(ProjectDir)\..\..\prebuilt\include\ogg\*.h $(OutDir)\include\ogg\
+if exist "$(ProjectDir)"\..\..\prebuilt\include\ogg\ogg.h (
+mkdir "$(OutDir)"\include\ogg
+copy /y "$(ProjectDir)"\..\..\prebuilt\include\ogg\*.h "$(OutDir)"\include\ogg\
 )</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\vorbis (
-rd /s /q $(OutDir)\include\vorbis
+if exist "$(OutDir)"\include\vorbis (
+rd /s /q "$(OutDir)"\include\vorbis
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -409,8 +409,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\vorbis (
-rmdir /s /q $(OutDir)\include\vorbis
+      <Command>if exist "$(OutDir)"\include\vorbis (
+rmdir /s /q "$(OutDir)"\include\vorbis
 )
 if exist $(OutDir)\licenses\vorbis.txt (
 del /f /q $(OutDir)\licenses\vorbis.txt
@@ -442,22 +442,22 @@ del /f /q $(OutDir)\licenses\vorbis.txt
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\vorbis
-copy ..\include\vorbis\*.h $(OutDir)\include\vorbis
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\vorbis
+copy ..\include\vorbis\*.h "$(OutDir)"\include\vorbis
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\vorbis.txt
-if exist $(ProjectDir)\..\..\prebuilt\include\ogg\ogg.h (
-mkdir $(OutDir)\include\ogg
-copy /y $(ProjectDir)\..\..\prebuilt\include\ogg\*.h $(OutDir)\include\ogg\
+if exist "$(ProjectDir)"\..\..\prebuilt\include\ogg\ogg.h (
+mkdir "$(OutDir)"\include\ogg
+copy /y "$(ProjectDir)"\..\..\prebuilt\include\ogg\*.h "$(OutDir)"\include\ogg\
 )</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\vorbis (
-rd /s /q $(OutDir)\include\vorbis
+if exist "$(OutDir)"\include\vorbis (
+rd /s /q "$(OutDir)"\include\vorbis
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -467,8 +467,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\vorbis (
-rmdir /s /q $(OutDir)\include\vorbis
+      <Command>if exist "$(OutDir)"\include\vorbis (
+rmdir /s /q "$(OutDir)"\include\vorbis
 )
 if exist $(OutDir)\licenses\vorbis.txt (
 del /f /q $(OutDir)\licenses\vorbis.txt
@@ -500,22 +500,22 @@ del /f /q $(OutDir)\licenses\vorbis.txt
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\vorbis
-copy ..\include\vorbis\*.h $(OutDir)\include\vorbis
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\vorbis
+copy ..\include\vorbis\*.h "$(OutDir)"\include\vorbis
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\vorbis.txt
-if exist $(ProjectDir)\..\..\prebuilt\include\ogg\ogg.h (
-mkdir $(OutDir)\include\ogg
-copy /y $(ProjectDir)\..\..\prebuilt\include\ogg\*.h $(OutDir)\include\ogg\
+if exist "$(ProjectDir)"\..\..\prebuilt\include\ogg\ogg.h (
+mkdir "$(OutDir)"\include\ogg
+copy /y "$(ProjectDir)"\..\..\prebuilt\include\ogg\*.h "$(OutDir)"\include\ogg\
 )</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\vorbis (
-rd /s /q $(OutDir)\include\vorbis
+if exist "$(OutDir)"\include\vorbis (
+rd /s /q "$(OutDir)"\include\vorbis
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -525,8 +525,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\vorbis (
-rmdir /s /q $(OutDir)\include\vorbis
+      <Command>if exist "$(OutDir)"\include\vorbis (
+rmdir /s /q "$(OutDir)"\include\vorbis
 )
 if exist $(OutDir)\licenses\vorbis.txt (
 del /f /q $(OutDir)\licenses\vorbis.txt
@@ -557,22 +557,22 @@ del /f /q $(OutDir)\licenses\vorbis.txt
       <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\vorbis
-copy ..\include\vorbis\*.h $(OutDir)\include\vorbis
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\vorbis
+copy ..\include\vorbis\*.h "$(OutDir)"\include\vorbis
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\vorbis.txt
-if exist $(ProjectDir)\..\..\prebuilt\include\ogg\ogg.h (
-mkdir $(OutDir)\include\ogg
-copy /y $(ProjectDir)\..\..\prebuilt\include\ogg\*.h $(OutDir)\include\ogg\
+if exist "$(ProjectDir)"\..\..\prebuilt\include\ogg\ogg.h (
+mkdir "$(OutDir)"\include\ogg
+copy /y "$(ProjectDir)"\..\..\prebuilt\include\ogg\*.h "$(OutDir)"\include\ogg\
 )</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\vorbis (
-rd /s /q $(OutDir)\include\vorbis
+if exist "$(OutDir)"\include\vorbis (
+rd /s /q "$(OutDir)"\include\vorbis
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -582,8 +582,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\vorbis (
-rmdir /s /q $(OutDir)\include\vorbis
+      <Command>if exist "$(OutDir)"\include\vorbis (
+rmdir /s /q "$(OutDir)"\include\vorbis
 )
 if exist $(OutDir)\licenses\vorbis.txt (
 del /f /q $(OutDir)\licenses\vorbis.txt
@@ -614,22 +614,22 @@ del /f /q $(OutDir)\licenses\vorbis.txt
       <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\vorbis
-copy ..\include\vorbis\*.h $(OutDir)\include\vorbis
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\vorbis
+copy ..\include\vorbis\*.h "$(OutDir)"\include\vorbis
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\vorbis.txt
-if exist $(ProjectDir)\..\..\prebuilt\include\ogg\ogg.h (
-mkdir $(OutDir)\include\ogg
-copy /y $(ProjectDir)\..\..\prebuilt\include\ogg\*.h $(OutDir)\include\ogg\
+if exist "$(ProjectDir)"\..\..\prebuilt\include\ogg\ogg.h (
+mkdir "$(OutDir)"\include\ogg
+copy /y "$(ProjectDir)"\..\..\prebuilt\include\ogg\*.h "$(OutDir)"\include\ogg\
 )</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\vorbis (
-rd /s /q $(OutDir)\include\vorbis
+if exist "$(OutDir)"\include\vorbis (
+rd /s /q "$(OutDir)"\include\vorbis
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -639,8 +639,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\vorbis (
-rmdir /s /q $(OutDir)\include\vorbis
+      <Command>if exist "$(OutDir)"\include\vorbis (
+rmdir /s /q "$(OutDir)"\include\vorbis
 )
 if exist $(OutDir)\licenses\vorbis.txt (
 del /f /q $(OutDir)\licenses\vorbis.txt
@@ -678,22 +678,22 @@ del /f /q $(OutDir)\licenses\vorbis.txt
       <AdditionalLibraryDirectories>$(OutDir)\lib\x86\;$(ProjectDir)\..\..\prebuilt\lib\x86\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\vorbis
-copy ..\include\vorbis\*.h $(OutDir)\include\vorbis
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\vorbis
+copy ..\include\vorbis\*.h "$(OutDir)"\include\vorbis
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\vorbis.txt
-if exist $(ProjectDir)\..\..\prebuilt\include\ogg\ogg.h (
-mkdir $(OutDir)\include\ogg
-copy /y $(ProjectDir)\..\..\prebuilt\include\ogg\*.h $(OutDir)\include\ogg\
+if exist "$(ProjectDir)"\..\..\prebuilt\include\ogg\ogg.h (
+mkdir "$(OutDir)"\include\ogg
+copy /y "$(ProjectDir)"\..\..\prebuilt\include\ogg\*.h "$(OutDir)"\include\ogg\
 )</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\vorbis (
-rd /s /q $(OutDir)\include\vorbis
+if exist "$(OutDir)"\include\vorbis (
+rd /s /q "$(OutDir)"\include\vorbis
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -703,8 +703,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\vorbis (
-rmdir /s /q $(OutDir)\include\vorbis
+      <Command>if exist "$(OutDir)"\include\vorbis (
+rmdir /s /q "$(OutDir)"\include\vorbis
 )
 if exist $(OutDir)\licenses\vorbis.txt (
 del /f /q $(OutDir)\licenses\vorbis.txt
@@ -742,22 +742,22 @@ del /f /q $(OutDir)\licenses\vorbis.txt
       <AdditionalLibraryDirectories>$(OutDir)\lib\x86\;$(ProjectDir)\..\..\prebuilt\lib\x86\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\vorbis
-copy ..\include\vorbis\*.h $(OutDir)\include\vorbis
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\vorbis
+copy ..\include\vorbis\*.h "$(OutDir)"\include\vorbis
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\vorbis.txt
-if exist $(ProjectDir)\..\..\prebuilt\include\ogg\ogg.h (
-mkdir $(OutDir)\include\ogg
-copy /y $(ProjectDir)\..\..\prebuilt\include\ogg\*.h $(OutDir)\include\ogg\
+if exist "$(ProjectDir)"\..\..\prebuilt\include\ogg\ogg.h (
+mkdir "$(OutDir)"\include\ogg
+copy /y "$(ProjectDir)"\..\..\prebuilt\include\ogg\*.h "$(OutDir)"\include\ogg\
 )</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\vorbis (
-rd /s /q $(OutDir)\include\vorbis
+if exist "$(OutDir)"\include\vorbis (
+rd /s /q "$(OutDir)"\include\vorbis
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -767,8 +767,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\vorbis (
-rmdir /s /q $(OutDir)\include\vorbis
+      <Command>if exist "$(OutDir)"\include\vorbis (
+rmdir /s /q "$(OutDir)"\include\vorbis
 )
 if exist $(OutDir)\licenses\vorbis.txt (
 del /f /q $(OutDir)\licenses\vorbis.txt
@@ -806,22 +806,22 @@ del /f /q $(OutDir)\licenses\vorbis.txt
       <AdditionalLibraryDirectories>$(OutDir)\lib\x64\;$(ProjectDir)\..\..\prebuilt\lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\vorbis
-copy ..\include\vorbis\*.h $(OutDir)\include\vorbis
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\vorbis
+copy ..\include\vorbis\*.h "$(OutDir)"\include\vorbis
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\vorbis.txt
-if exist $(ProjectDir)\..\..\prebuilt\include\ogg\ogg.h (
-mkdir $(OutDir)\include\ogg
-copy /y $(ProjectDir)\..\..\prebuilt\include\ogg\*.h $(OutDir)\include\ogg\
+if exist "$(ProjectDir)"\..\..\prebuilt\include\ogg\ogg.h (
+mkdir "$(OutDir)"\include\ogg
+copy /y "$(ProjectDir)"\..\..\prebuilt\include\ogg\*.h "$(OutDir)"\include\ogg\
 )</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\vorbis (
-rd /s /q $(OutDir)\include\vorbis
+if exist "$(OutDir)"\include\vorbis (
+rd /s /q "$(OutDir)"\include\vorbis
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -831,8 +831,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\vorbis (
-rmdir /s /q $(OutDir)\include\vorbis
+      <Command>if exist "$(OutDir)"\include\vorbis (
+rmdir /s /q "$(OutDir)"\include\vorbis
 )
 if exist $(OutDir)\licenses\vorbis.txt (
 del /f /q $(OutDir)\licenses\vorbis.txt
@@ -870,22 +870,22 @@ del /f /q $(OutDir)\licenses\vorbis.txt
       <AdditionalLibraryDirectories>$(OutDir)\lib\x64\;$(ProjectDir)\..\..\prebuilt\lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\vorbis
-copy ..\include\vorbis\*.h $(OutDir)\include\vorbis
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\vorbis
+copy ..\include\vorbis\*.h "$(OutDir)"\include\vorbis
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\vorbis.txt
-if exist $(ProjectDir)\..\..\prebuilt\include\ogg\ogg.h (
-mkdir $(OutDir)\include\ogg
-copy /y $(ProjectDir)\..\..\prebuilt\include\ogg\*.h $(OutDir)\include\ogg\
+if exist "$(ProjectDir)"\..\..\prebuilt\include\ogg\ogg.h (
+mkdir "$(OutDir)"\include\ogg
+copy /y "$(ProjectDir)"\..\..\prebuilt\include\ogg\*.h "$(OutDir)"\include\ogg\
 )</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\vorbis (
-rd /s /q $(OutDir)\include\vorbis
+if exist "$(OutDir)"\include\vorbis (
+rd /s /q "$(OutDir)"\include\vorbis
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -895,8 +895,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\vorbis (
-rmdir /s /q $(OutDir)\include\vorbis
+      <Command>if exist "$(OutDir)"\include\vorbis (
+rmdir /s /q "$(OutDir)"\include\vorbis
 )
 if exist $(OutDir)\licenses\vorbis.txt (
 del /f /q $(OutDir)\licenses\vorbis.txt
@@ -936,22 +936,22 @@ del /f /q $(OutDir)\licenses\vorbis.txt
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\vorbis
-copy ..\include\vorbis\*.h $(OutDir)\include\vorbis
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\vorbis
+copy ..\include\vorbis\*.h "$(OutDir)"\include\vorbis
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\vorbis.txt
-if exist $(ProjectDir)\..\..\prebuilt\include\ogg\ogg.h (
-mkdir $(OutDir)\include\ogg
-copy /y $(ProjectDir)\..\..\prebuilt\include\ogg\*.h $(OutDir)\include\ogg\
+if exist "$(ProjectDir)"\..\..\prebuilt\include\ogg\ogg.h (
+mkdir "$(OutDir)"\include\ogg
+copy /y "$(ProjectDir)"\..\..\prebuilt\include\ogg\*.h "$(OutDir)"\include\ogg\
 )</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\vorbis (
-rd /s /q $(OutDir)\include\vorbis
+if exist "$(OutDir)"\include\vorbis (
+rd /s /q "$(OutDir)"\include\vorbis
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -961,8 +961,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\vorbis (
-rmdir /s /q $(OutDir)\include\vorbis
+      <Command>if exist "$(OutDir)"\include\vorbis (
+rmdir /s /q "$(OutDir)"\include\vorbis
 )
 if exist $(OutDir)\licenses\vorbis.txt (
 del /f /q $(OutDir)\licenses\vorbis.txt
@@ -1002,22 +1002,22 @@ del /f /q $(OutDir)\licenses\vorbis.txt
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\vorbis
-copy ..\include\vorbis\*.h $(OutDir)\include\vorbis
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\vorbis
+copy ..\include\vorbis\*.h "$(OutDir)"\include\vorbis
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\vorbis.txt
-if exist $(ProjectDir)\..\..\prebuilt\include\ogg\ogg.h (
-mkdir $(OutDir)\include\ogg
-copy /y $(ProjectDir)\..\..\prebuilt\include\ogg\*.h $(OutDir)\include\ogg\
+if exist "$(ProjectDir)"\..\..\prebuilt\include\ogg\ogg.h (
+mkdir "$(OutDir)"\include\ogg
+copy /y "$(ProjectDir)"\..\..\prebuilt\include\ogg\*.h "$(OutDir)"\include\ogg\
 )</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\vorbis (
-rd /s /q $(OutDir)\include\vorbis
+if exist "$(OutDir)"\include\vorbis (
+rd /s /q "$(OutDir)"\include\vorbis
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -1027,8 +1027,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\vorbis (
-rmdir /s /q $(OutDir)\include\vorbis
+      <Command>if exist "$(OutDir)"\include\vorbis (
+rmdir /s /q "$(OutDir)"\include\vorbis
 )
 if exist $(OutDir)\licenses\vorbis.txt (
 del /f /q $(OutDir)\licenses\vorbis.txt
@@ -1067,22 +1067,22 @@ del /f /q $(OutDir)\licenses\vorbis.txt
       <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\vorbis
-copy ..\include\vorbis\*.h $(OutDir)\include\vorbis
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\vorbis
+copy ..\include\vorbis\*.h "$(OutDir)"\include\vorbis
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\vorbis.txt
-if exist $(ProjectDir)\..\..\prebuilt\include\ogg\ogg.h (
-mkdir $(OutDir)\include\ogg
-copy /y $(ProjectDir)\..\..\prebuilt\include\ogg\*.h $(OutDir)\include\ogg\
+if exist "$(ProjectDir)"\..\..\prebuilt\include\ogg\ogg.h (
+mkdir "$(OutDir)"\include\ogg
+copy /y "$(ProjectDir)"\..\..\prebuilt\include\ogg\*.h "$(OutDir)"\include\ogg\
 )</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\vorbis (
-rd /s /q $(OutDir)\include\vorbis
+if exist "$(OutDir)"\include\vorbis (
+rd /s /q "$(OutDir)"\include\vorbis
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -1092,8 +1092,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\vorbis (
-rmdir /s /q $(OutDir)\include\vorbis
+      <Command>if exist "$(OutDir)"\include\vorbis (
+rmdir /s /q "$(OutDir)"\include\vorbis
 )
 if exist $(OutDir)\licenses\vorbis.txt (
 del /f /q $(OutDir)\licenses\vorbis.txt
@@ -1132,22 +1132,22 @@ del /f /q $(OutDir)\licenses\vorbis.txt
       <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\vorbis
-copy ..\include\vorbis\*.h $(OutDir)\include\vorbis
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\vorbis
+copy ..\include\vorbis\*.h "$(OutDir)"\include\vorbis
 mkdir $(OutDir)\licenses
 copy ..\COPYING $(OutDir)\licenses\vorbis.txt
-if exist $(ProjectDir)\..\..\prebuilt\include\ogg\ogg.h (
-mkdir $(OutDir)\include\ogg
-copy /y $(ProjectDir)\..\..\prebuilt\include\ogg\*.h $(OutDir)\include\ogg\
+if exist "$(ProjectDir)"\..\..\prebuilt\include\ogg\ogg.h (
+mkdir "$(OutDir)"\include\ogg
+copy /y "$(ProjectDir)"\..\..\prebuilt\include\ogg\*.h "$(OutDir)"\include\ogg\
 )</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist ..\config.h (
 del ..\config.h
 )
-if exist $(OutDir)\include\vorbis (
-rd /s /q $(OutDir)\include\vorbis
+if exist "$(OutDir)"\include\vorbis (
+rd /s /q "$(OutDir)"\include\vorbis
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -1157,8 +1157,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\vorbis (
-rmdir /s /q $(OutDir)\include\vorbis
+      <Command>if exist "$(OutDir)"\include\vorbis (
+rmdir /s /q "$(OutDir)"\include\vorbis
 )
 if exist $(OutDir)\licenses\vorbis.txt (
 del /f /q $(OutDir)\licenses\vorbis.txt
