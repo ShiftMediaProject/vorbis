@@ -11,7 +11,6 @@
  ********************************************************************
 
  function: maintain the info structure, info <-> header packets
- last mod: $Id$
 
  ********************************************************************/
 
@@ -31,8 +30,8 @@
 #include "misc.h"
 #include "os.h"
 
-#define GENERAL_VENDOR_STRING "Xiph.Org libVorbis 1.3.5"
-#define ENCODE_VENDOR_STRING "Xiph.Org libVorbis I 20150105 (⛄⛄⛄⛄)"
+#define GENERAL_VENDOR_STRING "Xiph.Org libVorbis 1.3.6"
+#define ENCODE_VENDOR_STRING "Xiph.Org libVorbis I 20180316 (Now 100% fewer shells)"
 
 /* helpers */
 static void _v_writestring(oggpack_buffer *o,const char *s, int bytes){
@@ -212,9 +211,9 @@ static int _vorbis_unpack_info(vorbis_info *vi,oggpack_buffer *opb){
   vi->channels=oggpack_read(opb,8);
   vi->rate=oggpack_read(opb,32);
 
-  vi->bitrate_upper=oggpack_read(opb,32);
-  vi->bitrate_nominal=oggpack_read(opb,32);
-  vi->bitrate_lower=oggpack_read(opb,32);
+  vi->bitrate_upper=(ogg_int32_t)oggpack_read(opb,32);
+  vi->bitrate_nominal=(ogg_int32_t)oggpack_read(opb,32);
+  vi->bitrate_lower=(ogg_int32_t)oggpack_read(opb,32);
 
   ci->blocksizes[0]=1<<oggpack_read(opb,4);
   ci->blocksizes[1]=1<<oggpack_read(opb,4);
@@ -589,7 +588,8 @@ int vorbis_analysis_headerout(vorbis_dsp_state *v,
   oggpack_buffer opb;
   private_state *b=v->backend_state;
 
-  if(!b||vi->channels<=0){
+  if(!b||vi->channels<=0||vi->channels>256){
+    b = NULL;
     ret=OV_EFAULT;
     goto err_out;
   }
@@ -648,7 +648,7 @@ int vorbis_analysis_headerout(vorbis_dsp_state *v,
   memset(op_code,0,sizeof(*op_code));
 
   if(b){
-    oggpack_writeclear(&opb);
+    if(vi->channels>0)oggpack_writeclear(&opb);
     if(b->header)_ogg_free(b->header);
     if(b->header1)_ogg_free(b->header1);
     if(b->header2)_ogg_free(b->header2);
