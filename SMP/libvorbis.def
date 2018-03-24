@@ -1,6 +1,5 @@
 EXPORTS
-;
-; $Id$
+; vorbis.def
 ; 
 
 
@@ -58,10 +57,7 @@ vorbis_encode_setup_init
 vorbis_encode_ctl
 ;
 vorbis_version_string
-;
 ; vorbisfile.def
-;
-; last modified: $Id$
 ;
 
 
@@ -100,8 +96,7 @@ ov_crosslap
 ov_halfrate
 ov_halfrate_p
 ov_fopen
-;
-; $Id$
+; vorbisenc.def
 ;
 
 
